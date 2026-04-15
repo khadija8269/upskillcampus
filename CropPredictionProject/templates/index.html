@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Agriculture Production Prediction</title>
+
+<style>
+
+body {
+    font-family: Arial;
+    background: #eaf5e3;
+    text-align: center;
+    padding: 40px;
+}
+
+form {
+    background: white;
+    padding: 20px;
+    display: inline-block;
+    border-radius: 10px;
+}
+
+input {
+    margin: 8px;
+    padding: 10px;
+    width: 220px;
+}
+
+button {
+    padding: 10px 20px;
+    background: green;
+    color: white;
+    border: none;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 20px;
+    color: blue;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>🌾 Agriculture Production Prediction</h1>
+
+<form action="/predict" method="post">
+
+<input type="number" step="any"
+name="year1"
+placeholder="Production Year 1"
+required>
+
+<br>
+
+<input type="number" step="any"
+name="year2"
+placeholder="Production Year 2"
+required>
+
+<br>
+
+<input type="number" step="any"
+name="year3"
+placeholder="Production Year 3"
+required>
+
+<br>
+
+<input type="number" step="any"
+name="year4"
+placeholder="Production Year 4"
+required>
+
+<br>
+
+<input type="number" step="any"
+name="year5"
+placeholder="Production Year 5"
+required>
+
+<br>
+
+<button type="submit">
+Predict Next Year
+</button>
+
+</form>
+
+<div class="result">
+
+{{ prediction_text }}
+
+</div>
+
+</body>
+
+</html>
